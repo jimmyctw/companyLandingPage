@@ -83,6 +83,8 @@ $clr-alert: #D8315B;
 main,footer{
     background-color: $clr-black;
     color: $clr-white;
+    overflow-x: hidden;
+
 }
 
 // ------------------- value
@@ -110,7 +112,7 @@ main,footer{
     }
     .service-item-img{
         width: 300px;
-        
+
         overflow: hidden;
         object-fit: contain;
         img{
