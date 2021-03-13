@@ -111,6 +111,7 @@ main,footer{
     .service-item-img{
         width: 300px;
         overflow: hidden;
+        object-fit: contain;
     }
 
     .service-item-list ul{
