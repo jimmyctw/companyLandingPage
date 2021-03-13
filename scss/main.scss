@@ -164,7 +164,7 @@ main,footer{
     @include flexR;
     justify-content: center;
     >div{
-        margin: 1%;
+        margin: 3rem;
     }
     .location-map{
         width: 300px;
@@ -217,6 +217,31 @@ main,footer{
     }
 
 }
+.confirmContainer{
+
+    margin: 1rem;
+    @include flexC;
+    width: 300px;
+        border-radius: 1rem;
+
+    background-color: rgba($clr-white, .5);
+    padding: 1rem;
+    .confirmCotent{
+        @include flexC;
+        align-items: flex-start;
+    }
+
+    .sendContent{
+        width: 10rem;
+        height: 5rem;
+        background: transparent;
+
+        color: $clr-black;
+    }
+}
+
+
+
 
 footer{
     @include flexC;
