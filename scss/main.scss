@@ -110,8 +110,13 @@ main,footer{
     }
     .service-item-img{
         width: 300px;
+        
         overflow: hidden;
         object-fit: contain;
+        img{
+            width: 300px;
+
+        }
     }
 
     .service-item-list ul{
