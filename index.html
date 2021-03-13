@@ -8,12 +8,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
+    <!-- animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+    
     <!-- main css -->
     <link rel="stylesheet" href="/css/main.css">
+
+    <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <!-- carousel -->
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+
+    
+    
     <script defer type="module" src="/app.js"></script>
+    
+    
+    
+    
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbfGYJKSG_Sdz_SfkIKEvp4REufFMb1-8&callback=initMap&libraries=&v=weekly"
         ></script>
     <title>トアル株式会社</title>
@@ -48,7 +69,7 @@
                 <img src="/assets/toaruBg.png" alt="">
             </div>
         </header>
-        <div class="main-box value-box" id="value">
+        <div class="main-box value-box" id="value" data-aos="fade-left">
             <div class="box-title">
                 <h1>VALUE</h1>
             </div>
@@ -60,14 +81,20 @@
                 </ul>
             </div>
         </div>
-        <div class="main-box service-box" id="service">
+        <div class="main-box service-box" id="service" data-aos="fade-right">
             <div class="box-title">
                 <h1>SERVICE</h1>
             </div>
             <div class="box-content service-content">
-                <div class="service-item-img">
-                    <img src="/assets/service/service1.png" alt="company image">
+                <div class="owl-carousel">
+                    
+                    <div class="service-item-img">
+                        <img src="/assets/service/service1.png" alt="company image">
+                    </div>
+
                 </div>
+
+
                 <div class="service-item-list">
                     <ul>
                         <li>
@@ -113,7 +140,7 @@
             </div>
         </div>
 
-        <div class="main-box team-box" id="team">
+        <div class="main-box team-box" id="team" data-aos="fade-left">
             <div class="box-title">
                 <h1>TEAM</h1>
             </div>
@@ -167,7 +194,7 @@
                 </ul>
             </div>
         </div>
-        <div class="main-box location-box" id="location">
+        <div class="main-box location-box" id="location" data-aos="fade-right">
             <div class="box-title">
                 <h1>LOCATION</h1>
             </div>
@@ -181,11 +208,11 @@
                 </div>
             </div>
         </div>
-        <div class="main-box contact-box" id="contact">
+        <div class="main-box contact-box" id="contact" data-aos="fade-left">
             <div class="box-title">
                 <h1>CONTACT</h1>
             </div>
-            <div class="box-content">
+            <div class="box-content" id="formAndSend">
                 
                 <div class="form-box">
                     <form action="">
@@ -199,14 +226,14 @@
                         <input type="text" id="fmobile" name="mobile" placeholder="携帯番号入力してください">
 
 
-                        <label for="subject">Message</label>
-                        <textarea id="subject" name="subject" placeholder="あのね...." style="height:200px"></textarea>
+                        <label for="fmessage">Message</label>
+                        <textarea type="text" id="fmessage" name="message" placeholder="あのね...." style="height:200px"></textarea>
                         
                         <input id="submitBtn" type="submit" value="Confirm">
 
                     </form>
                 </div>
-                <div class="confirmContainer">
+                <!-- <div class="confirmContainer">
                     <div class="confirmCotent">
 
                         <h1>John </h1>
@@ -214,12 +241,10 @@
                         <span>Mail</span>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis consequuntur, adipisci tenetur unde provident itaque, accusantium est magnam placeat suscipit ipsam necessitatibus sunt sapiente similique harum nam qui optio? Voluptatem ad, saepe dicta velit similique illo fuga voluptate possimus!</p>
                     </div>
-                    <button class="sendContent">
+                    <button class="sendContentBtn">
                         Send
                     </button>
-
-
-                </div>
+                </div> -->
 
             </div>
         </div>
@@ -238,5 +263,16 @@
             <span>トアル株式会社<br>All rights reserved 2021</span>
         </div>
     </footer>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+            AOS.init({
+                offset: 400,
+                duration: 1500
+            });
+
+    </script>
+
 </body>
 </html>

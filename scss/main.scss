@@ -71,8 +71,7 @@ $clr-alert: #D8315B;
 
 .main-box{
     @include flexC;
-	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    min-height: 50vh;
     .box-title{
         font-family: $font-en2;
         h1{
@@ -114,19 +113,18 @@ main,footer{
         @include flexR;        
         justify-content: space-around;
         >div{
-            width: 400px;
-            height: 350px;
-            @include flexC;        
+            @include flexC;   
+            width: 300px;     
             justify-content: center;
+            margin: .5rem;
         }
     }
     .service-item-img{
-        width: 300px;
+        height: 350px;
         overflow: hidden;
         object-fit: contain;
         img{
             width: 300px;
-
         }
     }
 
@@ -135,7 +133,6 @@ main,footer{
         li{
             width: 300px;
             padding: 0 1rem;
-            
             margin: .5rem 0;
             text-align: center;
             button, .serviceDetail{
@@ -143,7 +140,7 @@ main,footer{
                 width: 100%;
                 text-align: left;
                 background-color: transparent;
-                margin-bottom: 1rem 0;
+                margin-bottom: .5rem;
             }
             .serviceDetail{
 	            -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -277,32 +274,6 @@ footer{
     }
 }
 
-//--------------- value anime
-@-webkit-keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
-}
-@keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
-}
-//--------------- value anime
 
 
 //--------------- service btn anime
