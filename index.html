@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <!-- main css -->
+    <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script defer type="module" src="/app.js"></script>
+    <title>トアル株式会社</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse" id="nav">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">トアル</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#value">VALUE</a></li>
+                    <li><a href="#service">SERVICE</a></li>
+                    <li><a href="#team">TEAM</a></li>
+                    <li><a href="#location">LOCATION</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+
+        <div id="header-img">
+            <img src="/assets/toaruBg.png" alt="">
+        </div>
+    </header>
+
+    <main>
+        <div class="main-box value-box" id="value">
+            <div class="box-title">
+                <h1>VALUE</h1>
+            </div>
+            <div class="box-item">
+                <ul>
+                    <li>売り手によし</li>
+                    <li>買い手によし</li>
+                    <li>世間によし</li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-box service-box" id="service">
+            <div class="box-title">
+                <h1>SERVICE</h1>
+            </div>
+            <div class="box-item service-content">
+                <div class="service-item-img">
+                    <img src="/assets/service1.png" alt="">
+                </div>
+                <div class="service-item-list">
+                    <ul>
+                        <li><i class="fas fa-briefcase"></i>&nbsp;HP制作</li>
+                        <li><i class="fas fa-briefcase"></i>&nbsp;バナー/ ポスター制作</li>
+                        <li><i class="fas fa-briefcase"></i>&nbsp;SNS運営</li>
+                        <li><i class="fas fa-briefcase"></i>&nbsp;CM制作</li>
+                        <li><i class="fas fa-briefcase"></i>&nbsp;IT コンサルティング</li>
+    
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-box team-box" id="team">
+            <div class="box-title">
+                <h1>TEAM</h1>
+            </div>
+            <div class="box-item team-item-list">
+                <ul>
+                    <li class="team-item">
+                        <div class="item-img">
+                            <img src="/assets/author/author1.png" alt="team member">
+                        </div>
+                        <div class="item-info">
+                            <h3>TK</h3>
+                            <span>CEO</span>
+                        </div>
+                    </li>
+                    <li class="team-item">
+                        <div class="item-img">
+                            <img src="/assets/author/author2.png" alt="">
+                        </div>
+                        <div class="item-info">
+                            <h3>YD</h3>
+                            <span>HR</span>
+                        </div>
+                    </li>
+                    <li class="team-item">
+                        <div class="item-img">
+                            <img src="/assets/author/author3.png"  alt="team member">
+                        </div>
+                        <div class="item-info">
+                            <h3>WB</h3>
+                            <span>Engineer</span>
+                        </div>
+                    </li>
+                    <li class="team-item">
+                        <div class="item-img">
+                            <img src="/assets/author/author4.png"  alt="team member">
+                        </div>
+                        <div class="item-info">
+                            <h3>YM</h3>
+                            <span>Auditor</span>
+                        </div>
+                    </li>
+                    <li class="team-item">
+                        <div class="item-img">
+                            <img src="/assets/author/author5.png" alt="team member">
+                        </div>
+                        <div class="item-info">
+                            <h3>TM</h3>
+                            <span>Sales Rep.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-box location-box" id="location">
+            <div class="box-title">
+                <h1>LOCATION</h1>
+            </div>
+            <div>
+                <div></div>
+                <div>
+                    <span>TEL: 000-0000-0000</span><br>
+                    <address>京都府京都市左京区丸太町通川端東入東竹屋町50京都大学熊野寮</address>
+                </div>
+            </div>
+        </div>
+        <div class="main-box contact-box" id="contact">
+            <div class="box-title">
+                <h1>CONTACT</h1>
+            </div>
+            <div class="box-title">
+                
+                <div class="form-box">
+                    <form action="">
+                        <label for="fname">名字</label>
+                        <input type="text" id="fname" name="firstname" placeholder="お名前は...">
+                        <label for="fmail">メール</label>
+                        <input type="mail" id="fmail" name="email" placeholder="携帯番号入力してください">
+                        <label for="fmobile">携帯番号</label>
+                        <input type="mail" id="fmobile" name="mobile" placeholder="メール入力してください">
+
+                        <label for="subject">メッセージ</label>
+                        <textarea id="subject" name="subject" placeholder="あのね...." style="height:200px"></textarea>
+                        
+                        <input id="submitBtn" type="submit" value="Submit">
+    
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="sns-box">
+            <ul>
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                <li><a href=""><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div>
+            <span>トアル株式会社<br>All right reserved 2021</span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,158 @@
+@import "init";
+@import "mixin";
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&family=Noto+Sans+JP&family=Open+Sans+Condensed:wght@300&family=Playfair+Display&display=swap');
+
+body{
+    position: relative;
+}
+
+li{
+    margin: .5rem;
+}
+i{
+    font-size: 3rem;
+}
+img{
+    height: 100%;
+}
+
+@mixin teamItem{
+    .team-item{
+        width: 100%;
+        
+    }
+    .item-img{
+        width: 12rem;
+        height: 12rem;
+        border-radius: 35rem;
+        object-fit: cover;
+        overflow: hidden;
+        border: 1px solid $clr-white;
+    }
+    .item-info{
+        @include flexC;
+        font-size: 1.5rem;
+    }
+}
+
+$font-jp1: 'M PLUS Rounded 1c', sans-serif;
+$font-jp2: 'Noto Sans JP', sans-serif;
+$font-en1: 'Open Sans Condensed', sans-serif;
+$font-en2: 'Playfair Display', serif;
+
+$clr-white: #fffffa;
+$clr-black: #000103;
+$clr-blue: #3E92CC;
+$clr-alert: #D8315B;
+
+
+#nav{
+    margin: 0;
+    top: 0;
+    position:sticky;
+}
+
+
+.main-box{
+    @include flexC;
+    .box-title{
+        font-family: $font-en2;
+        h1{
+            font-size: 3.5rem;
+            margin: 3rem 0;
+        }
+    }
+    .box-item{
+        font-family: $font-jp2;
+        font-size: 2rem;
+        padding: .5rem 1rem;
+        ul{
+            @include flexR;
+            justify-content: center;
+        }
+        li{
+            margin: .5rem 1rem;
+            width: 15rem;
+        }
+    }
+}
+main,footer{
+    background-color: $clr-black;
+    color: $clr-white;
+}
+
+.service-box{
+
+    .service-content{
+        @include flexR;        
+        
+        justify-content: space-around;
+        >div{
+            width: 400px;
+        }
+    }
+
+    .service-item-list ul{
+        @include flexC;
+        li{
+            width: 100%;
+            padding: 0 1rem;
+
+            margin: 2rem 0;
+        }
+
+    }
+
+}
+
+
+
+.team-box{
+    .team-item-list{
+        @include flexR;
+    }
+    .team-item{
+        @include teamItem;
+        @include flexC;
+    }
+
+}
+
+
+
+.contact-box{
+    form{
+        @include flexC;
+        font-size: 2rem;
+    }
+    label, input{
+        margin: 1rem 0;
+    }
+    input, textarea{
+        padding: 1rem;
+        width: 300px;
+                border-bottom: $clr-blue!important;
+    }
+    textarea{
+        height: 300px;
+    }
+    input:focus{
+        border-bottom: $clr-blue!important;
+    }
+
+}
+
+footer{
+    @include flexC;
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 2rem;
+    ul{
+        @include flexR;
+        justify-content: center;
+        li{
+            margin: 1.5rem;
+        }
+    }
+}
