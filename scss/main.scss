@@ -235,17 +235,13 @@ main,footer{
 
 }
 .confirmContainer{
-
-    margin: 1rem;
     @include flexC;
     width: 300px;
-        border-radius: 1rem;
-
+    border-radius: 1rem;
     background-color: rgba($clr-white, .5);
-    padding: 1rem;
     .confirmCotent{
         @include flexC;
-        align-items: flex-start;
+        width: 100%;
     }
     .sendContent{
         width: 10rem;
@@ -253,6 +249,14 @@ main,footer{
         background: transparent;
 
         color: $clr-black;
+    }
+    .sendContentBtn{
+        background-color: transparent;
+         border-radius: 1rem;
+         margin: 1rem;
+        width: 10rem;
+        height: 5rem;
+        border: 1px solid $clr-black;
     }
 }
 
