@@ -14,7 +14,9 @@ li{
 i{
     font-size: 3rem;
 }
-
+img{
+    width: 100%;
+}
 $font-jp1: 'M PLUS Rounded 1c', sans-serif;
 $font-jp2: 'Noto Sans JP', sans-serif;
 $font-en1: 'Open Sans Condensed', sans-serif;
@@ -59,6 +61,7 @@ $clr-alert: #D8315B;
     top: 0;
     position:sticky;
     z-index: 10;
+    font-family: $font-en2;
 }
 
 
@@ -105,6 +108,9 @@ main,footer{
             width: 400px;
         }
     }
+    .service-item-img{
+        overflow: hidden;
+    }
 
     .service-item-list ul{
         @include flexC;
@@ -128,6 +134,8 @@ main,footer{
     .team-item{
         @include teamItem;
         @include flexC;
+        font-family: $font-en1;
+
     }
     ul{
         @include flexR;
@@ -146,17 +154,24 @@ main,footer{
         @include flexC;
         font-size: 2rem;
     }
-    label, input{
-        margin: 1rem 0;
+    label, input, textarea{
+        width: 300px;
     }
-    input, textarea{
-        padding: 1rem;
-        width: 200px;
-        border-bottom: $clr-blue!important;
+    label, input, textarea{
+        margin: .5rem 0;
+        padding: .5rem;
     }
-    textarea{
-        height: 400px;
+    label{
+        font-family: $font-en1;
     }
+    input{
+        font-family: $font-jp1;
+    }
+    textarea, input{
+        color: #000103;
+    }
+
+
     input:focus{
         border-bottom: $clr-blue!important;
     }
@@ -164,6 +179,7 @@ main,footer{
     #submitBtn{
         width: 10rem;
         height: 5rem;
+        color: $clr-white;
         background: transparent;
         border: 1px solid $clr-white;
     }
@@ -175,6 +191,7 @@ footer{
     padding: 1.5rem 0;
     text-align: center;
     font-size: 2rem;
+    font-family: $font-en2;
     ul{
         @include flexR;
         justify-content: center;
