@@ -10,10 +10,12 @@
         crossorigin="anonymous" />
     <!-- main css -->
     <link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script defer type="module" src="/app.js"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbfGYJKSG_Sdz_SfkIKEvp4REufFMb1-8&callback=initMap&libraries=&v=weekly"
+        ></script>
     <title>トアル株式会社</title>
 </head>
 <body>
@@ -69,35 +71,40 @@
                 <div class="service-item-list">
                     <ul>
                         <li>
-                            <div>
-                                <i class="fas fa-briefcase"></i>&nbsp;&nbsp;WEB制作全般
-                            </div>
-                            <div>
-                                <span>RWD, Design, Maintaince</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <i class="fas fa-briefcase"></i>&nbsp;&nbsp;バナー・サムネイル制作
-                            </div>
-                            <div>
-                                <span>Banner, Poster, ICON</span>
+                            <button class="serviceBtn">
+                                <i class="fas fa-caret-down"></i>&nbsp;&nbsp;WEB制作
+                            </button>
+                            <div class="serviceDetail displayNone">
+                                <span>&nbsp;-&nbsp;RWD、設計、更新、メンテナンス</span>
                             </div>
                         </li>
                         <li>
-                            <div>
-                                <i class="fas fa-briefcase"></i>&nbsp;&nbsp;SNS運営
-                            </div>
-                            <div>
-                                <span>Facebook, Twitter, Ingstgram</span>
+                            <button class="serviceBtn">
+                                <i class="fas fa-caret-down"></i>&nbsp;&nbsp;映像系
+                            </button>
+                            <div class="serviceDetail displayNone">
+                                <span>&nbsp;-&nbsp;バナー、サムネ、ポスター、ビラ</span>
                             </div>
                         </li>
                         <li>
-                            <div>
-                                <i class="fas fa-briefcase"></i>&nbsp;&nbsp;ITコンサルティング
+                            <button class="serviceBtn">
+                                <i class="fas fa-caret-down"></i>&nbsp;&nbsp;SNS運営
+                            </button>
+                            <div class="serviceDetail displayNone">
+                                <span>
+                                    &nbsp;-&nbsp;
+                                    <i class="fab fa-facebook-square"></i>&nbsp;&nbsp;
+                                    <i class="fab fa-instagram-square"></i>&nbsp;&nbsp;
+                                    <i class="fab fa-twitter"></i>&nbsp;&nbsp;
+                                </span>
                             </div>
-                            <div>
-                                <span>Advertising, SEO, BtoC</span>
+                        </li>
+                        <li>
+                            <button class="serviceBtn">
+                                <i class="fas fa-caret-down"></i>&nbsp;&nbsp;ITコンサルティング
+                            </button>
+                            <div class="serviceDetail displayNone">
+                                <span>&nbsp;-&nbsp;広告, 集客, BtoC</span>
                             </div>
                         </li>
     
@@ -165,7 +172,7 @@
                 <h1>LOCATION</h1>
             </div>
             <div class="box-content location-content">
-                <div class="location-map">
+                <div class="location-map" id="locationMap">
 
                 </div>
                 <div>
