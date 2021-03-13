@@ -5,6 +5,7 @@
 
 body{
     position: relative;
+    overflow-x: hidden;
 }
 
 li{
@@ -12,28 +13,6 @@ li{
 }
 i{
     font-size: 3rem;
-}
-img{
-    height: 100%;
-}
-
-@mixin teamItem{
-    .team-item{
-        width: 100%;
-        
-    }
-    .item-img{
-        width: 12rem;
-        height: 12rem;
-        border-radius: 35rem;
-        object-fit: cover;
-        overflow: hidden;
-        border: 1px solid $clr-white;
-    }
-    .item-info{
-        @include flexC;
-        font-size: 1.5rem;
-    }
 }
 
 $font-jp1: 'M PLUS Rounded 1c', sans-serif;
@@ -46,11 +25,40 @@ $clr-black: #000103;
 $clr-blue: #3E92CC;
 $clr-alert: #D8315B;
 
+@mixin teamItem{
+    .team-item{
+        width: 15rem;
+        height: 20rem;
+        margin: 2rem!important;
+    }
+    .item-img{
+        width: 15rem;
+        width: 15rem;
+        clip-path: circle(50% at 50% 50%);
+        object-fit: cover;
+        background-color: rgba($clr-white, .5);
+        img{
+            width: 100%;
+        }
+    }
+    .item-info{
+        @include flexC;
+        height: 5rem;
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+
 
 #nav{
     margin: 0;
     top: 0;
     position:sticky;
+    z-index: 10;
 }
 
 
@@ -63,24 +71,29 @@ $clr-alert: #D8315B;
             margin: 3rem 0;
         }
     }
-    .box-item{
+    .box-content{
         font-family: $font-jp2;
         font-size: 2rem;
         padding: .5rem 1rem;
-        ul{
-            @include flexR;
-            justify-content: center;
-        }
-        li{
-            margin: .5rem 1rem;
-            width: 15rem;
-        }
     }
 }
 main,footer{
     background-color: $clr-black;
     color: $clr-white;
 }
+
+// ------------------- value
+
+
+.value-box{
+    ul{
+        @include flexC;
+    }
+}
+
+
+
+// ------------------- service
 
 .service-box{
 
@@ -106,7 +119,7 @@ main,footer{
 
 }
 
-
+// ------------------- team
 
 .team-box{
     .team-item-list{
@@ -116,10 +129,17 @@ main,footer{
         @include teamItem;
         @include flexC;
     }
+    ul{
+        @include flexR;
+        justify-content: center;
+        li{
+            margin: 1.5rem;
+        }
+    }
 
 }
 
-
+// ------------------- contact
 
 .contact-box{
     form{
@@ -131,14 +151,21 @@ main,footer{
     }
     input, textarea{
         padding: 1rem;
-        width: 300px;
-                border-bottom: $clr-blue!important;
+        width: 200px;
+        border-bottom: $clr-blue!important;
     }
     textarea{
-        height: 300px;
+        height: 400px;
     }
     input:focus{
         border-bottom: $clr-blue!important;
+    }
+
+    #submitBtn{
+        width: 10rem;
+        height: 5rem;
+        background: transparent;
+        border: 1px solid $clr-white;
     }
 
 }
@@ -156,3 +183,7 @@ footer{
         }
     }
 }
+
+
+
+
