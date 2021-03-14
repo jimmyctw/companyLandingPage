@@ -28,7 +28,9 @@ submitBtn.addEventListener('click', (event)=>{
     const fmail = document.getElementById('fmail').value;
     const fmobile = document.getElementById('fmobile').value;
     const fmessage = document.getElementById('fmessage').value;
-    confirmContainerBuild(fname, fmail, fmobile, fmessage);
+    if(fname !== '' && fmail !== '' && fmobile !== '' && fmessage !== ''  ){
+        confirmContainerBuild(fname, fmail, fmobile, fmessage);
+    }
 })
 
 function confirmContainerBuild(fname, fmail, fmobile, fmessage){
@@ -37,7 +39,7 @@ function confirmContainerBuild(fname, fmail, fmobile, fmessage){
     confirmContainer.classList.add('confirmContainer');
     const confirmCotent = document.createElement('div')
     confirmCotent.classList.add('confirmCotent');
-    confirmCotent.setAttribute('id', 'sendContent');
+    confirmCotentVal.setAttribute('id', 'sendContent');
     const confirmCotentVal = `
         <h1> ${fname}</h1>
         <span> Email: ${fmail}</span>

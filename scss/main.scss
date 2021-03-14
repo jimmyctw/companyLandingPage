@@ -69,6 +69,9 @@ $clr-alert: #D8315B;
 }
 
 
+
+
+
 .main-box{
     @include flexC;
     min-height: 50vh;
@@ -91,6 +94,13 @@ main,footer{
     overflow-x: hidden;
 
 }
+
+
+
+
+
+
+
 
 // ------------------- value
 
@@ -187,8 +197,11 @@ main,footer{
         width: 300px;
         height: 300px;
     }
+    .location-info{
+        max-width: 350px;
+    }
     ul{
-        @include flex;
+        @include flexR;
     }
 }
 
@@ -281,6 +294,7 @@ footer{
         }
     }
 }
+
 
 
 
