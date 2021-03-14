@@ -199,11 +199,13 @@ main,footer{
     }
     .location-info{
         max-width: 350px;
+
     }
     ul{
         @include flexR;
+        justify-content: space-around;
         li{
-            margin: .5rem 1.5rem;
+            margin: 1rem 0;
         }
     }
 }
