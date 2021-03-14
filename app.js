@@ -28,6 +28,7 @@ function confirmContainerBuild(fname, fmail, fmobile, fmessage){
     confirmContainer.classList.add('confirmContainer');
     const confirmCotent = document.createElement('div')
     confirmCotent.classList.add('confirmCotent');
+    confirmCotent.setAttribute('id', 'sendContent');
     const confirmCotentVal = `
         <h1> ${fname}</h1>
         <span> Email: ${fmail}</span>

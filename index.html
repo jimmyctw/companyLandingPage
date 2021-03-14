@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
@@ -11,9 +12,6 @@
     <!-- animation -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-
-
-    
     <!-- main css -->
     <link rel="stylesheet" href="/css/main.css">
 
@@ -25,18 +23,15 @@
     <!-- carousel -->
     <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
-
     <script src="owlcarousel/owl.carousel.min.js"></script>
 
     
-    
+    <!-- main js -->
     <script defer type="module" src="/app.js"></script>
     
     
     
-    
-    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbfGYJKSG_Sdz_SfkIKEvp4REufFMb1-8&callback=initMap&libraries=&v=weekly"
-        ></script>
+
     <title>トアル株式会社</title>
 </head>
 <body>
@@ -50,13 +45,13 @@
                 </button>
                 <a class="navbar-brand" href="#">トアル</a>
             </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
+            <div class="collapse navbar-collapse" id="myNavbar" >
                 <ul class="nav navbar-nav">
-                    <li><a href="#value">VALUE</a></li>
-                    <li><a href="#service">SERVICE</a></li>
-                    <li><a href="#team">TEAM</a></li>
-                    <li><a href="#location">LOCATION</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
+                    <li ><a href="#value">VALUE</a></li>
+                    <li ><a href="#service">SERVICE</a></li>
+                    <li ><a href="#team">TEAM</a></li>
+                    <li ><a href="#location">LOCATION</a></li>
+                    <li ><a href="#contact">CONTACT</a></li>
                 </ul>
             </div>
         </div>
@@ -65,7 +60,7 @@
     
     <main>
         <header>
-            <div id="header-img">
+            <div id="header-img" data-aos="fade-down">
                 <img src="/assets/toaruBg.png" alt="">
             </div>
         </header>
@@ -200,11 +195,18 @@
             </div>
             <div class="box-content location-content">
                 <div class="location-map" id="locationMap">
-
                 </div>
                 <div>
-                    <span>TEL: 000-0000-0000</span><br>
                     <address>京都府京都市左京区丸太町通川端東入東竹屋町50</address>
+                    <p>京都大学から：自転車で10分以内、徒歩30分以内（東大路通を南下、熊野神社前交差点を西）<br>
+                    最寄りの駅：京阪電鉄神宮丸太町駅（丸太町通りを東に徒歩5分）<br>
+                    最寄りのバス停：熊野神社前（丸太町通りを西に徒歩2分）</p>
+                    <ul>
+                        <li><i class="fab fa-facebook-square"></i></li>
+                        <li><i class="fab fa-instagram-square"></i></li>
+                        <li><i class="fab fa-twitter"></i></li>
+                    </ul>
+
                 </div>
             </div>
         </div>
@@ -256,12 +258,28 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-            AOS.init({
-                offset: 400,
-                duration: 1500
+        AOS.init({
+            offset: 300,
+            duration: 1000
+        });
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+            const location = { lat: 35.016875, lng: 135.776038};
+            // The map, centered at Uluru
+            const map = new google.maps.Map(document.getElementById("locationMap"), {
+                zoom: 15,
+                center: location,
             });
-
+            // The marker, positioned at Uluru
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+            });
+        }
     </script>
+    <!-- googlemap -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbfGYJKSG_Sdz_SfkIKEvp4REufFMb1-8&callback=initMap&libraries=&v=weekly"></script>
 
 </body>
 </html>
