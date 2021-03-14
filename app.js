@@ -28,7 +28,7 @@ submitBtn.addEventListener('click', (event)=>{
     const fmail = document.getElementById('fmail').value;
     const fmobile = document.getElementById('fmobile').value;
     const fmessage = document.getElementById('fmessage').value;
-    if(fname !== '' && fmail !== '' && fmobile !== '' && fmessage !== ''  ){
+    if(fname !== '' && fmail !== '' && fmobile !== '' && fmessage !== ''){
         confirmContainerBuild(fname, fmail, fmobile, fmessage);
     }
 })
@@ -39,7 +39,7 @@ function confirmContainerBuild(fname, fmail, fmobile, fmessage){
     confirmContainer.classList.add('confirmContainer');
     const confirmCotent = document.createElement('div')
     confirmCotent.classList.add('confirmCotent');
-    confirmCotentVal.setAttribute('id', 'sendContent');
+    confirmCotent.setAttribute('id', 'sendContent');
     const confirmCotentVal = `
         <h1> ${fname}</h1>
         <span> Email: ${fmail}</span>
@@ -50,7 +50,8 @@ function confirmContainerBuild(fname, fmail, fmobile, fmessage){
     const sendContentBtn = document.createElement('button');
     sendContentBtn.classList.add('sendContentBtn')
     sendContentBtn.innerHTML = "send";
-    confirmContainer.appendChild(confirmCotent).appendChild(sendContentBtn)
+    confirmContainer.appendChild(confirmCotent)
+    confirmContainer.appendChild(sendContentBtn)
     formAndSend.appendChild(confirmContainer)
     formBox.classList.add('displayNone')
 

@@ -261,16 +261,20 @@ main,footer{
 
 
     #sendContent{
-        width: 10rem;
-        height: 5rem;
+        @include flexC;
+        align-items: flex-start;
+        width: 100%;
+        padding: .5rem;
         background: transparent;
-        font-size: 2rem;
         color: $clr-black;
+        span, p{
+            font-size: 2rem;
+        }
     }
     .sendContentBtn{
         background-color: transparent;
-         border-radius: 1rem;
-         margin: 1rem;
+        border-radius: 1rem;
+        margin: 1rem;
         width: 10rem;
         height: 5rem;
         border: 1px solid $clr-black;
