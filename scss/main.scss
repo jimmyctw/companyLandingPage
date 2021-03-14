@@ -76,12 +76,12 @@ $clr-blue: #3E92CC;
 
 .main-box{
     @include flexC;
-    min-height: 50vh;
+    min-height: 55vh;
     .box-title{
         font-family: $font-en2;
         h1{
             font-size: 3.5rem;
-            margin: 3rem 0;
+            margin: 4rem 0;
         }
     }
     .box-content{
@@ -138,6 +138,8 @@ main,footer{
         width: 300px;
         overflow: hidden;
         object-fit: contain;
+        border-radius: 1rem;
+
     }
 
     .service-item-list ul{
@@ -200,6 +202,8 @@ main,footer{
     .location-map{
         width: 300px;
         height: 300px;
+       border-radius: 1rem;
+
     }
     .location-info{
         @include flexC;
@@ -247,13 +251,10 @@ main,footer{
     }
 
 
-    input:focus{
-        border-bottom: $clr-blue!important;
-    }
-
     #submitBtn{
         width: 10rem;
         height: 5rem;
+        margin-top: 1.5rem;
         color: $clr-white;
         background: transparent;
         border: 1px solid $clr-white;
@@ -271,32 +272,36 @@ main,footer{
     }
 
 
-    #sendContent{
-        @include flexC;
-        align-items: flex-start;
-        width: 100%;
-        padding: .5rem;
-        background: transparent;
-        color: $clr-black;
-        span, p{
-            font-size: 2rem;
-        }
-    }
-    .sendContentBtn{
-        background-color: transparent;
-        border-radius: 1rem;
-        margin: 1rem;
-        width: 10rem;
-        height: 5rem;
-        border: 1px solid $clr-black;
-    }
 }
 
 
+.confirmContainer{
+    background-color: $clr-black;
+    border: 1px solid $clr-white;
+    span, p{
+        font-size: 2rem;
+    }
+    #sendContent{
+        @include flexC;
+        align-items: flex-start;
+        padding: .5rem 1rem;
+        color: $clr-white;
 
+    }
+    .sendContentBtn{
+        width: 10rem;
+        height: 5rem;
+        margin: 1.5rem;
+        border-radius: 1rem;
+        background-color: $clr-black;
+
+        color: $clr-white;
+        border: 1px solid $clr-white;
+    }
+}
 
 footer{
-    padding: 1.5rem 0;
+    padding: 2rem 0;
     text-align: center;
     font-size: 2rem;
     font-family: $font-en2;
