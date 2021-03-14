@@ -202,6 +202,9 @@ main,footer{
     }
     ul{
         @include flexR;
+        li{
+            margin: .5rem 1.5rem;
+        }
     }
 }
 

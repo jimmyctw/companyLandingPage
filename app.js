@@ -1,7 +1,7 @@
 const serviceBtns = document.getElementsByClassName('serviceBtn');
 const formBox = document.getElementById('formBox')
 const headerImg = document.getElementById('headerImg')
-const headerChangeSet = setInterval(headerChange, 2500) 
+const headerChangeSet = setInterval(headerChange, 1500) 
 
 
 function headerChange(){
