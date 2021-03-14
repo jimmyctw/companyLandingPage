@@ -1,7 +1,16 @@
 const serviceBtns = document.getElementsByClassName('serviceBtn');
 const formBox = document.getElementById('formBox')
+const headerImg = document.getElementById('headerImg')
+const headerChangeSet = setInterval(headerChange, 2500) 
 
 
+function headerChange(){
+    const jp = document.getElementById("headerJp")
+    const en = document.getElementById("headerEn")
+    jp.classList.toggle('displayNone')
+    en.classList.toggle('displayNone')
+
+}
 
 
 

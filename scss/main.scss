@@ -188,7 +188,7 @@ main,footer{
         height: 300px;
     }
     ul{
-        @include flexR;
+        @include flex;
     }
 }
 
