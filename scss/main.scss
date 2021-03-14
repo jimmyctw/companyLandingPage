@@ -25,7 +25,7 @@ $font-en2: 'Playfair Display', serif;
 $clr-white: #fffffa;
 $clr-black: #000103;
 $clr-blue: #3E92CC;
-$clr-alert: #D8315B;
+
 
 
 @mixin teamItem{
@@ -40,6 +40,8 @@ $clr-alert: #D8315B;
         clip-path: circle(50% at 50% 50%);
         object-fit: cover;
         background-color: rgba($clr-white, .5);
+	-webkit-animation: color-change-3x 4s linear infinite alternate both;
+	        animation: color-change-3x 4s linear infinite alternate both;
         img{
             width: 100%;
         }
@@ -89,12 +91,11 @@ $clr-alert: #D8315B;
     }
 }
 main,footer{
+    @include flexC;
     background-color: $clr-black;
     color: $clr-white;
     overflow-x: hidden;
-
 }
-
 
 
 
@@ -106,10 +107,8 @@ main,footer{
 
 
 .value-box{
-
     ul{
         @include flexC;
-
     }
 }
 
@@ -124,18 +123,21 @@ main,footer{
         justify-content: space-around;
         >div{
             @include flexC;   
-            width: 300px;     
+            min-width: 300px;     
             justify-content: center;
-            margin: .5rem;
+            margin: 1rem;
         }
     }
+    #carousel{
+        @include flexR;
+        height: 300px;
+        width: 300px;
+        overflow: hidden;
+    }
     .service-item-img{
-        height: 350px;
+        width: 300px;
         overflow: hidden;
         object-fit: contain;
-        img{
-            width: 300px;
-        }
     }
 
     .service-item-list ul{
@@ -153,8 +155,8 @@ main,footer{
                 margin-bottom: .5rem;
             }
             .serviceDetail{
-	            -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	            animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	            -webkit-animation: scale-up-center 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	            animation: scale-up-center 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 
             }
 
@@ -180,7 +182,9 @@ main,footer{
         @include flexR;
         justify-content: center;
         li{
+            width: 250px;
             margin: 1.5rem;
+            
         }
     }
 
@@ -198,14 +202,16 @@ main,footer{
         height: 300px;
     }
     .location-info{
+        @include flexC;
         max-width: 350px;
 
     }
     ul{
         @include flexR;
+        width: 100%;
         justify-content: space-around;
         li{
-            margin: 1rem 0;
+            margin: 1rem;
         }
     }
 }
@@ -290,7 +296,6 @@ main,footer{
 
 
 footer{
-    @include flexC;
     padding: 1.5rem 0;
     text-align: center;
     font-size: 2rem;
@@ -331,3 +336,25 @@ footer{
 
 
 //--------------- service btn anime
+@-webkit-keyframes color-change-3x {
+  0% {
+    background: #C7EDE4;
+  }
+  50% {
+    background: #D5FFF3;
+  }
+  100% {
+    background: #AF9AB2;
+  }
+}
+@keyframes color-change-3x {
+  0% {
+    background: #C7EDE4;
+  }
+  50% {
+    background: #D5FFF3;
+  }
+  100% {
+    background: #AF9AB2;
+  }
+}

@@ -2,6 +2,25 @@ const serviceBtns = document.getElementsByClassName('serviceBtn');
 const formBox = document.getElementById('formBox')
 const headerImg = document.getElementById('headerImg')
 const headerChangeSet = setInterval(headerChange, 1500) 
+const serviceImgSlideSet = setInterval(serviceImgSlide, 1500)
+let imgNr = 1;
+
+
+
+
+
+function serviceImgSlide(){
+    const serviceItem = document.getElementById('serviceItem');
+    let img = `<img src="/assets/service/service${imgNr}.png" alt="company image">`
+    serviceItem.innerHTML = img;
+    imgNr ++;
+    if(imgNr > 5){
+        imgNr = 1;
+    }
+    // console.log(serviceItem)
+}
+
+
 
 
 function headerChange(){
@@ -9,8 +28,8 @@ function headerChange(){
     const en = document.getElementById("headerEn")
     jp.classList.toggle('displayNone')
     en.classList.toggle('displayNone')
-
 }
+        
 
 
 

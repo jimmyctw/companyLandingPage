@@ -15,16 +15,8 @@
     <!-- main css -->
     <link rel="stylesheet" href="/css/main.css">
 
-    <!-- bootstrap -->
+    <!-- bootstrap css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
-    <!-- carousel -->
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
-    <script src="owlcarousel/owl.carousel.min.js"></script>
-
     
     <!-- main js -->
     <script defer type="module" src="/app.js"></script>
@@ -84,10 +76,9 @@
                 <h1>SERVICE</h1>
             </div>
             <div class="box-content service-content">
-                <div class="owl-carousel">
+                <div class="carousel" id="carousel">
                     
-                    <div class="service-item-img">
-                        <img src="/assets/service/service1.png" alt="company image">
+                    <div class="service-item-img" id="serviceItem">
                     </div>
 
                 </div>
@@ -253,14 +244,18 @@
             <span>トアル株式会社<br>All rights reserved 2021</span>
         </div>
     </footer>
-
-
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
     <script>
         AOS.init({
             offset: 300,
             duration: 1000
         });
+
+
         // Initialize and add the map
         function initMap() {
             // The location of Uluru
@@ -277,6 +272,8 @@
             });
         }
     </script>
+
+
     <!-- googlemap -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbfGYJKSG_Sdz_SfkIKEvp4REufFMb1-8&callback=initMap&libraries=&v=weekly"></script>
 
