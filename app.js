@@ -37,9 +37,21 @@ for( let i = 0 ; i < serviceBtns.length ; i++ ){
     const serviceBtn = serviceBtns[i];
     serviceBtn.addEventListener('click', () => {
         const serviceDetail = serviceBtn.nextElementSibling;
+        const right = serviceBtn.firstElementChild;
+        const down = serviceBtn.firstElementChild.nextElementSibling;
+        right.classList.toggle('displayNone')
+        down.classList.toggle('displayNone')    
         serviceDetail.classList.toggle("displayNone");
     })
 }
+
+
+
+
+
+
+
+
 
 submitBtn.addEventListener('click', (event)=>{
     event.preventDefault();
