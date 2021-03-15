@@ -1,10 +1,10 @@
 const serviceBtns = document.getElementsByClassName('serviceBtn');
 const formBox = document.getElementById('formBox')
 const headerImg = document.getElementById('headerImg')
-const headerChangeSet = setInterval(headerChange, 1500) 
-const serviceImgSlideSet = setInterval(serviceImgSlide, 1500)
+const headerChangeSet = setInterval(headerChange, 2000) 
+const serviceImgSlideSet = setInterval(serviceImgSlide, 2000)
+const formAlert = ()=> {alert('すべてのフィールドにちゃんと入力してください!!');}
 let imgNr = 1;
-
 
 
 
@@ -59,8 +59,11 @@ submitBtn.addEventListener('click', (event)=>{
     const fmail = document.getElementById('fmail').value;
     const fmobile = document.getElementById('fmobile').value;
     const fmessage = document.getElementById('fmessage').value;
+
     if(fname !== '' && fmail !== '' && fmobile !== '' && fmessage !== ''){
         confirmContainerBuild(fname, fmail, fmobile, fmessage);
+    }else{
+        formAlert();
     }
 })
 
@@ -72,7 +75,8 @@ function confirmContainerBuild(fname, fmail, fmobile, fmessage){
     confirmCotent.classList.add('confirmCotent');
     confirmCotent.setAttribute('id', 'sendContent');
     const confirmCotentVal = `
-        <h1> ${fname}</h1>
+        <span>Your message</span>
+        <span> ${fname}</span>
         <span> Email: ${fmail}</span>
         <span> Mobile: ${fmobile}</span>
         <p> Message: ${fmessage}</p>
