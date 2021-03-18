@@ -9,6 +9,13 @@ let imgNr = 1;
 
 
 
+
+
+
+
+
+
+
 function serviceImgSlide(){
     const serviceItem = document.getElementById('serviceItem');
     let img = `<img src="/assets/service/service${imgNr}.png" alt="company image">`
