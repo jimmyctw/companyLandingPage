@@ -17,7 +17,6 @@ function serviceImgSlide(){
     if(imgNr > 5){
         imgNr = 1;
     }
-    // console.log(serviceItem)
 }
 
 

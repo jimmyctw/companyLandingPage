@@ -168,6 +168,10 @@ main,footer{
 
 }
 
+#serviceBg{
+    @include flexC;
+}
+
 // ------------------- team
 
 .team-box{
@@ -184,8 +188,7 @@ main,footer{
         @include flexR;
         justify-content: center;
         li{
-            width: 250px;
-            margin: 1.5rem;
+            margin: 3rem;
             
         }
     }
