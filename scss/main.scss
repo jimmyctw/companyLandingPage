@@ -40,8 +40,8 @@ $clr-blue: #3E92CC;
         clip-path: circle(50% at 50% 50%);
         object-fit: cover;
         background-color: rgba($clr-white, .5);
-	-webkit-animation: color-change-3x 4s linear infinite alternate both;
-	        animation: color-change-3x 4s linear infinite alternate both;
+	-webkit-animation: color-change-3x 5s linear infinite alternate both;
+	        animation: color-change-3x 5s linear infinite alternate both;
         img{
             width: 100%;
         }
@@ -63,7 +63,10 @@ body{
 }
 
 
-
+.navbar-brand > #navLogo{
+    width: 3.5rem;
+    height: 3.5rem;
+}
 
 #nav{
     margin: 0;
@@ -82,11 +85,31 @@ body{
     @include flexC;
     min-height: 55vh;
     .box-title{
+        @include flexR;
+        justify-content: center;
+        width: 100%;
         font-family: $font-en2;
-        h1{
-            font-size: 3.5rem;
-            margin: 4rem 0;
+
+        >div{
+            @include flexC;
+            margin: 1rem;
+
         }
+        .box-logo{
+            img{
+                width: 3.5rem;
+                height: 3.5rem;
+            }
+        }
+        .box-topic{
+            text-align:center;
+
+            h1{
+                font-size: 3.5rem;
+
+            }
+        }
+
     }
     .box-content{
         font-family: $font-jp2;
@@ -123,23 +146,19 @@ main,footer{
 .service-box{
 
     .service-content{
-        @include flexR;        
+        @include flexR;
+
         justify-content: space-around;
         >div{
             @include flexC;   
-            min-width: 300px;     
+            min-width: 300px;    
+            max-height: 450px;
             justify-content: center;
             margin: 1rem;
         }
     }
-    #carousel{
-        @include flexR;
-        height: 300px;
-        width: 300px;
-        overflow: hidden;
-    }
+
     .service-item-img{
-        width: 300px;
         overflow: hidden;
         object-fit: contain;
         border-radius: 1rem;
@@ -149,8 +168,10 @@ main,footer{
     .service-item-list ul{
         @include flexC;
         li{
+            background-color: rgba($clr-white, .2);
+            border-radius: 1rem;
             width: 300px;
-            padding: 0 1rem;
+            padding: .5rem;
             margin: .5rem 0;
             text-align: center;
             button, .serviceDetail{
@@ -205,6 +226,7 @@ main,footer{
     justify-content: center;
     >div{
         margin: 3rem;
+        border-radius: 1rem;
     }
     .location-map{
         width: 300px;
@@ -214,7 +236,10 @@ main,footer{
     }
     .location-info{
         @include flexC;
+        padding: 1.5rem;
         max-width: 350px;
+        max-height: 350px;
+        background-color: rgba($clr-white, .2);
 
     }
     ul{
@@ -350,23 +375,23 @@ footer{
 //--------------- service btn anime
 @-webkit-keyframes color-change-3x {
   0% {
-    background: #C7EDE4;
+    background: #000000;
   }
   50% {
-    background: #D5FFF3;
+    background: #474747;
   }
   100% {
-    background: #AF9AB2;
+    background: #000000;
   }
 }
 @keyframes color-change-3x {
   0% {
-    background: #C7EDE4;
+    background: #000000;
   }
   50% {
-    background: #D5FFF3;
+    background: #474747;
   }
   100% {
-    background: #AF9AB2;
+    background: #000000;
   }
 }
