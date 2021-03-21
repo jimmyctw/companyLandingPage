@@ -17,9 +17,9 @@ let imgNr = 1;
 
 
 function serviceImgSlide(){
-    const serviceItem = document.getElementById('serviceItem');
+    const serviceSlide = document.getElementById('serviceSlide');
     let img = `<img src="/assets/service/service${imgNr}.png" alt="company image">`
-    serviceItem.innerHTML = img;
+    serviceSlide.innerHTML = img;
     imgNr ++;
     if(imgNr > 5){
         imgNr = 1;

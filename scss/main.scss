@@ -138,9 +138,6 @@ main,footer{
         @include flexC;
     }
 }
-
-
-
 // ------------------- service
 
 .service-box{
@@ -162,7 +159,10 @@ main,footer{
         overflow: hidden;
         object-fit: contain;
         border-radius: 1rem;
-
+        position: relative;
+    }
+    .service-slide{
+        z-index: 1;
     }
 
     .service-item-list ul{
@@ -195,6 +195,11 @@ main,footer{
 
 #serviceBg{
     @include flexC;
+    position: absolute;
+
+    z-index: 0;
+    width: 100%;
+    height: 100%;
 }
 
 // ------------------- team
